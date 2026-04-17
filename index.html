@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8JDBEQ4RL"></script>
 <script>
@@ -10,7 +11,6 @@
 
   gtag('config', 'G-V8JDBEQ4RL');
 </script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -177,27 +177,9 @@
         <div class="container">
             <h2 class="section-title">All-Inclusive Subscriptions</h2>
             <p class="section-subtitle">Get a premium family cargo bike, full service, and peace of mind</p>
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>Monthly Subscription</h3>
-                    <div style="margin-bottom: 0.5rem; color: var(--text-light); font-size: 0.875rem;">(starts at)</div>
-                    <div class="price-display">
-                        <span class="currency">$</span>
-                        <span class="amount">300</span>
-                        <span class="period">/month</span>
-                    </div>
-                </div>
-                <ul class="pricing-features">
-                    <li><a href="storage-options.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">â STORAGE OPTIONS!</a></li>
-                    <li>â Premium family cargo bike</li>
-                    <li>â All-inclusive preventative maintenance and repairs</li>
-                    <li>â Theft protection</li>
-                    <li>â Free delivery in NYC</li>
-                    <li>â Month-to-month flexibility</li>
-                    <li>â Option to purchase</li>
-                </ul>
-                <a href="get-started.html" class="cta-button primary full-width">Get Started Today</a>
-            </div>
+                <div id="pricing-card-container"></div>
+            <script src="pricing-card.js"></script>
+            <script>renderPricingCard('pricing-card-container', { showCta: true });</script>
         </div>
     </section>
 
