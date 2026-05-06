@@ -4,23 +4,23 @@
    Sign Up button — red variant (matches Get Started style)
    ============================================================ */
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup {
-    background-color: #E63C25 !important;
-    background: #E63C25 !important;
-    color: #ffffff !important;
+    background-color: #FBDF52 !important;
+    background: #FBDF52 !important;
+    color: #06272E !important;
 }
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:hover {
-    background-color: #c0321d !important;
-    background: #c0321d !important;
-    color: #ffffff !important;
+    background-color: #e6c800 !important;
+    background: #e6c800 !important;
+    color: #06272E !important;
     transform: translateY(-2px) !important;
     box-shadow: var(--shadow-lg) !important;
 }
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:active,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:focus,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:visited {
-    background-color: #E63C25 !important;
-    background: #E63C25 !important;
-    color: #ffffff !important;
+    background-color: #FBDF52 !important;
+    background: #FBDF52 !important;
+    color: #06272E !important;
 }/* Modern Cargo Bike Leasing Website - from0to2.com */
 
 * {
@@ -30,38 +30,35 @@ body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:visited {
 }
 
 :root {
-    /* Exact color palette - no gradients */
-    --light-blue-grey: #9FAFC6;
-    --medium-purple-blue: #5F67A5;
-    --pale-yellow: #b0bbcd;
-    --gold: #E8BC34;
-    --olive-green: #647539;
-    --yellow: #F3C12F;
-    --light-sage-green: #A4B29C;
-    --sage-green: #A4B29C;
-    --red-orange: #E63C25;
-    
+    /* Whee! brand palette */
+    --skyline-blue: #79A3DB;
+    --bike-lane-black: #06272E;
+    --puffy-cloud-cream: #F9F5EE;
+    --playground-pink: #F295CE;
+    --big-yellow: #FBDF52;
+    --fort-greene: #D7C725;
+
     /* Primary colors for UI */
-    --primary-color: #5F67A5; /* Medium purple-blue */
-    --primary-dark: #4a5080;
-    --primary-light: #7a82b8;
-    --secondary-color: #647539; /* Olive green */
-    --secondary-dark: #4d5a2b;
-    --secondary-light: #7a8a4a;
-    --accent-gold: #E8BC34;
-    --accent-yellow: #F3C12F;
-    --accent-pale-yellow: #b0bbcd;
+    --primary-color: #79A3DB; /* Skyline Blue */
+    --primary-dark: #5a80b8;
+    --primary-light: #9ab8e4;
+    --secondary-color: #D7C725; /* Fort Greene */
+    --secondary-dark: #b8a91e;
+    --secondary-light: #e5d640;
+    --accent-gold: #FBDF52;
+    --accent-yellow: #FBDF52;
+    --accent-pale-yellow: #F9F5EE;
     --accent-red-orange: #E63C25;
     --accent-sage: #A4B29C;
     --accent-blue-grey: #9FAFC6;
-    
-    --text-color: #1f2937;
-    --text-light: #6b7280;
-    --text-lighter: #9ca3af;
+
+    --text-color: #06272E;
+    --text-light: #3d5a61;
+    --text-lighter: #6b8a90;
     --bg-color: #ffffff;
     --bg-light: #f9fafb;
-    --bg-pale-yellow: #b0bbcd;
-    --bg-dark: #2c3e2d;
+    --bg-pale-yellow: #F9F5EE;
+    --bg-dark: #06272E; /* Bike Lane Black */
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -69,8 +66,26 @@ body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:visited {
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Brand font stacks — swap in P22 Mackinack Pro and Halyard Display once loaded via Adobe Fonts */
+:root {
+    --font-display: 'P22 Mackinack Pro', 'Fraunces', Georgia, serif;
+    --font-body: 'Halyard Display', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-accent: 'Anonymous Pro', 'Courier New', monospace;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+}
+
+.accent-text {
+    font-family: var(--font-accent);
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-color);
     background: var(--bg-color);
@@ -151,9 +166,9 @@ body {
 }
 
 .navbar-logo img {
-    height: 45px;
+    height: 64px;
     width: auto;
-    max-width: 200px;
+    max-width: 280px;
     display: block;
     object-fit: contain;
     image-rendering: -webkit-optimize-contrast;
@@ -330,35 +345,29 @@ a.cta-button.nav-cta:visited,
     font-size: 3rem;
     font-weight: 800;
     color: var(--text-color);
-    margin-bottom: 2.5rem;
-    line-height: 1.1;
-    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     word-wrap: break-word;
     overflow-wrap: break-word;
     display: block;
-    min-height: 3.3em; /* Ensure title container maintains height for 3-line rotating text */
 }
 
 .hero-title-static {
-    display: inline-block;
-    white-space: nowrap;
+    display: block;
 }
 
 .rotating-words {
     position: relative;
-    display: inline-block;
-    vertical-align: baseline;
-    margin-left: 0.3em;
-    margin-bottom: 0.2em;
-    /* Height will be set dynamically by JavaScript to accommodate 3 lines */
+    display: block;
+    overflow: hidden;
 }
 
 .rotating-word-measure {
     visibility: hidden;
-    display: inline-block;
-    color: #e2452f;
+    display: block;
+    color: #F295CE;
     font-weight: 900;
     white-space: normal;
     word-break: normal;
@@ -378,7 +387,7 @@ a.cta-button.nav-cta:visited,
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s;
-    color: #e2452f;
+    color: #F295CE;
     font-weight: 900;
     white-space: normal;
     word-break: normal;
@@ -510,7 +519,22 @@ a.cta-button.nav-cta:visited,
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    gap: 2rem;
+}
+
+.feature-item {
+    background: var(--bg-pale-yellow);
+    border-radius: 16px;
+    padding: 2rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+.feature-item:nth-child(2) {
+    border-top-color: var(--playground-pink);
+}
+
+.feature-item:nth-child(3) {
+    border-top-color: var(--big-yellow);
 }
 
 .feature-item h2 {
@@ -555,6 +579,7 @@ a.cta-button.nav-cta:visited,
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .enjoy-content p,
@@ -725,6 +750,16 @@ a.cta-button.nav-cta:visited,
     box-shadow: var(--shadow-lg);
 }
 
+/* Hero Static Image */
+.hero-static-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+}
+
 /* Hero Carousel Styles */
 .hero-carousel {
     position: relative;
@@ -738,7 +773,7 @@ a.cta-button.nav-cta:visited,
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
     background: var(--bg-light);
-    height: 550px;
+    height: 420px;
 }
 
 .hero-carousel-track {
@@ -899,7 +934,7 @@ a.cta-button.nav-cta:visited,
 }
 
 .available-badge {
-    background: #10b981;
+    background: var(--skyline-blue);
 }
 
 .out-of-stock-banner {
@@ -995,7 +1030,7 @@ a.cta-button.nav-cta:visited,
     border-radius: 16px;
     padding: 3rem;
     box-shadow: var(--shadow-xl);
-    border: 2px solid var(--primary-color);
+    border: 4px solid var(--primary-color);
 }
 
 .pricing-header {
@@ -1108,7 +1143,6 @@ a.cta-button.nav-cta:visited,
 .cta-section {
     padding: 80px 20px;
     background: var(--primary-color);
-    color: white;
     text-align: center;
 }
 
@@ -1116,12 +1150,14 @@ a.cta-button.nav-cta:visited,
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .cta-section p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: white;
+    opacity: 0.9;
 }
 
 .cta-section .cta-button.primary {
@@ -1130,8 +1166,9 @@ a.cta-button.nav-cta:visited,
 }
 
 .cta-section .cta-button.primary:hover {
-    background: var(--bg-light);
+    background: var(--bg-pale-yellow);
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -1175,6 +1212,27 @@ a.cta-button.nav-cta:visited,
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-lighter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-social a {
+    color: var(--text-lighter);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a:hover {
+    color: white;
 }
 
 /* Legal Content Pages */
@@ -1284,7 +1342,7 @@ a.cta-button.nav-cta:visited,
     
     .navbar-logo img,
     .logo-image {
-        height: 35px;
+        height: 50px;
     }
     
     .nav-home-link {
@@ -1331,8 +1389,12 @@ a.cta-button.nav-cta:visited,
         margin: 0 auto;
     }
     
+    .hero-static-image {
+        height: 300px;
+    }
+
     .hero-carousel-container {
-        height: 400px;
+        height: 300px;
     }
     
     .hero-carousel-arrow {
@@ -1393,7 +1455,7 @@ a.cta-button.nav-cta:visited,
     
     .navbar-logo img,
     .logo-image {
-        height: 30px;
+        height: 44px;
     }
     
     .nav-home-link {
@@ -1775,16 +1837,17 @@ a.cta-button.nav-cta:visited,
     }
 }
 
-/* Final override for navigation Get Started button - placed at end to ensure highest priority */
+
+/* Final override for navigation Let's ride button - placed at end to ensure highest priority */
 body .navbar .nav-container .nav-right a.cta-button.nav-cta {
-    background-color: #5F67A5 !important;
-    background: #5F67A5 !important;
+    background-color: #79A3DB !important;
+    background: #79A3DB !important;
     color: #ffffff !important;
 }
 
 body .navbar .nav-container .nav-right a.cta-button.nav-cta:hover {
-    background-color: #7a82b8 !important;
-    background: #7a82b8 !important;
+    background-color: #9ab8e4 !important;
+    background: #9ab8e4 !important;
     color: #ffffff !important;
     transform: translateY(-2px) !important;
     box-shadow: var(--shadow-lg) !important;
@@ -1793,8 +1856,8 @@ body .navbar .nav-container .nav-right a.cta-button.nav-cta:hover {
 body .navbar .nav-container .nav-right a.cta-button.nav-cta:active,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta:focus,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta:visited {
-    background-color: #5F67A5 !important;
-    background: #5F67A5 !important;
+    background-color: #79A3DB !important;
+    background: #79A3DB !important;
     color: #ffffff !important;
 }
 
@@ -1802,21 +1865,21 @@ body .navbar .nav-container .nav-right a.cta-button.nav-cta:visited {
    Sign Up button — red variant, matches Get Started style
    ============================================================ */
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup {
-    background-color: #E63C25 !important;
-    background: #E63C25 !important;
-    color: #ffffff !important;
+    background-color: #FBDF52 !important;
+    background: #FBDF52 !important;
+    color: #06272E !important;
 }
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:hover {
-    background-color: #c0321d !important;
-    background: #c0321d !important;
-    color: #ffffff !important;
+    background-color: #e6c800 !important;
+    background: #e6c800 !important;
+    color: #06272E !important;
     transform: translateY(-2px) !important;
     box-shadow: var(--shadow-lg) !important;
 }
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:active,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:focus,
 body .navbar .nav-container .nav-right a.cta-button.nav-cta-signup:visited {
-    background-color: #E63C25 !important;
-    background: #E63C25 !important;
-    color: #ffffff !important;
+    background-color: #FBDF52 !important;
+    background: #FBDF52 !important;
+    color: #06272E !important;
 }

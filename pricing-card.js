@@ -3,12 +3,11 @@ const PRICING_DATA = {
   price: 300,
   period: 'month',
   features: [
-    { text: 'STORAGE OPTIONS!', href: 'storage-options.html' },
     { text: 'Premium family cargo bike' },
-    { text: 'All-inclusive preventative maintenance and repairs' },
-    { text: 'Theft protection' },
-    { text: 'Free delivery in NYC' },
-    { text: 'Month-to-month flexibility' },
+    { text: 'Insurance & theft protection' },
+    { text: 'Normal maintenance and repairs' },
+    { text: 'Free delivery in Brooklyn, Manhattan, and Queens' },
+    { text: 'Month-to-month, cancel anytime' },
     { text: 'Option to purchase' },
   ],
 };
@@ -25,7 +24,7 @@ function renderPricingCard(containerId, options) {
   }).join('\n                    ');
 
   var ctaHtml = (options && options.showCta)
-    ? '<a href="get-started.html" class="cta-button primary full-width">Get Started Today</a>'
+    ? '<a href="https://cal.com/ridewhee/whee-test-ride" class="cta-button primary full-width">Schedule a Test Ride</a>'
     : '';
 
   container.innerHTML =
