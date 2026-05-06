@@ -47,7 +47,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-image">
-                <img src="images/gsd-01.jpeg" alt="Urban Arrow Family cargo bike" class="hero-bike-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="images/urban-arrow-family-01.jpg" alt="Urban Arrow Family cargo bike" class="hero-bike-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <span class="available-badge">Available</span>
                 <div class="image-placeholder bike-hero" style="display: none;">
                     <div class="placeholder-content">
@@ -58,48 +58,6 @@
             <div class="hero-content">
                 <h1 class="hero-title">Urban Arrow Family</h1>
                 <p class="hero-subtitle">The ultimate family cargo bike for NYC. A spacious front cargo box fits up to three kids, all the groceries, and everything in between.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- GSD Photo Carousel -->
-    <section class="bike-showcase" style="padding-top: 2rem;">
-        <div class="container">
-            <div class="gsd-carousel-wrapper">
-                <div class="gsd-carousel" id="gsd-carousel">
-                    <div class="gsd-carousel-container">
-                        <div class="gsd-carousel-track" id="gsd-carousel-track">
-                            <div class="gsd-carousel-slide active">
-                                <img src="images/gsd-02.jpg" alt="Urban Arrow Family cargo bike" class="gsd-carousel-image">
-                            </div>
-                            <div class="gsd-carousel-slide">
-                                <img src="images/gsd-03.jpeg" alt="Urban Arrow Family cargo bike" class="gsd-carousel-image">
-                            </div>
-                            <div class="gsd-carousel-slide">
-                                <img src="images/gsd-04.jpeg" alt="Urban Arrow Family cargo bike" class="gsd-carousel-image">
-                            </div>
-                            <div class="gsd-carousel-slide">
-                                <img src="images/gsd-05.jpg" alt="GSD E-bike" class="gsd-carousel-image gsd-image-05">
-                            </div>
-                        </div>
-                        <button class="gsd-carousel-arrow gsd-carousel-prev" id="gsd-carousel-prev" aria-label="Previous image">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </button>
-                        <button class="gsd-carousel-arrow gsd-carousel-next" id="gsd-carousel-next" aria-label="Next image">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
-                        <div class="gsd-carousel-indicators" id="gsd-carousel-indicators">
-                            <button class="gsd-carousel-indicator active" data-slide="0" aria-label="Go to slide 1"></button>
-                            <button class="gsd-carousel-indicator" data-slide="1" aria-label="Go to slide 2"></button>
-                            <button class="gsd-carousel-indicator" data-slide="2" aria-label="Go to slide 3"></button>
-                            <button class="gsd-carousel-indicator" data-slide="3" aria-label="Go to slide 4"></button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -173,116 +131,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // GSD Photo Carousel
-        (function() {
-            const carousel = document.getElementById('gsd-carousel');
-            const track = document.getElementById('gsd-carousel-track');
-            const slides = track.querySelectorAll('.gsd-carousel-slide');
-            const prevBtn = document.getElementById('gsd-carousel-prev');
-            const nextBtn = document.getElementById('gsd-carousel-next');
-            const indicators = document.querySelectorAll('.gsd-carousel-indicator');
-            
-            let currentSlide = 0;
-            let autoScrollTimeout;
-            const autoScrollDelay = 4000; // 4 seconds
-            
-            function updateCarousel() {
-                slides.forEach((slide, index) => {
-                    slide.classList.remove('active');
-                    if (index === currentSlide) {
-                        slide.classList.add('active');
-                    }
-                });
-                
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.remove('active');
-                    if (index === currentSlide) {
-                        indicator.classList.add('active');
-                    }
-                });
-            }
-            
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                updateCarousel();
-                scheduleNextSlide();
-            }
-            
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                updateCarousel();
-                scheduleNextSlide();
-            }
-            
-            function scheduleNextSlide() {
-                clearTimeout(autoScrollTimeout);
-                autoScrollTimeout = setTimeout(() => {
-                    nextSlide();
-                }, autoScrollDelay);
-            }
-            
-            function pauseAutoScroll() {
-                clearTimeout(autoScrollTimeout);
-            }
-            
-            function resumeAutoScroll() {
-                scheduleNextSlide();
-            }
-            
-            // Initialize
-            updateCarousel();
-            scheduleNextSlide();
-            
-            // Pause on hover
-            carousel.addEventListener('mouseenter', pauseAutoScroll);
-            carousel.addEventListener('mouseleave', resumeAutoScroll);
-            
-            // Arrow buttons
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-            });
-            
-            // Indicators
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    currentSlide = index;
-                    updateCarousel();
-                    scheduleNextSlide();
-                });
-            });
-            
-            // Swipe support
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            track.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-                pauseAutoScroll();
-            }, { passive: true });
-            
-            track.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const swipeDistance = touchStartX - touchEndX;
-                const minSwipeDistance = 50;
-                
-                if (Math.abs(swipeDistance) > minSwipeDistance) {
-                    if (swipeDistance > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                } else {
-                    resumeAutoScroll();
-                }
-            }, { passive: true });
-        })();
-    </script>
 
     <script>
         // Set hidden form fields
