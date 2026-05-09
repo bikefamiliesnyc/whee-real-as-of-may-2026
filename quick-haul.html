@@ -6,8 +6,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="description" content="Quick Haul family cargo bike - Currently out of stock. Get notified when available for subscription in NYC.">
-    <title>Quick Haul | Cargo Bike Leasing NYC | ridewhee.com</title>
+    <meta name="description" content="Tern Quick Haul Long cargo bike coming soon to NYC. Sign up to be the first to know.">
+    <title>Quick Haul | Cargo Bike Subscriptions NYC | ridewhee.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Fraunces:ital,opsz,wght@0,9..144,300..900&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-image">
-                <img src="images/quick-haul.webp" alt="Quick Haul E-bike" class="hero-bike-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="out-of-stock-banner">Out of Stock</div>
+                <img src="images/qhl-2.jpg" alt="Quick Haul E-bike" class="hero-bike-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="available-badge" style="background: var(--skyline-blue);">Coming soon</span>
                 <div class="image-placeholder bike-hero" style="display: none;">
                     <div class="placeholder-content">
                         <p>Quick Haul Image</p>
@@ -75,8 +75,8 @@
     <!-- Notify Me Section -->
     <section class="pricing">
         <div class="container">
-            <h2 class="section-title">Be Informed When Back in Stock</h2>
-            <p class="section-subtitle">The Quick Haul is currently out of stock. Enter your email below and we'll notify you as soon as it becomes available.</p>
+            <h2 class="section-title">Interested in the Tern Quick Haul Long?</h2>
+            <p class="section-subtitle">Fill out the form below and we'll be in touch when it's available.</p>
             <div id="form-message" class="form-message"></div>
             <form id="quick-haul-form" class="bike-form">
                 <div class="form-group">
@@ -96,7 +96,7 @@
                 <input type="hidden" id="timestamp" name="timestamp">
                 <input type="hidden" id="referrer" name="referrer">
                 <input type="hidden" id="user-agent" name="user_agent">
-                <button type="submit" class="cta-button primary full-width">Notify Me When Available</button>
+                <button type="submit" class="cta-button primary full-width">Submit Inquiry</button>
             </form>
         </div>
     </section>
@@ -188,7 +188,7 @@
             setTimeout(() => {
                 // Show success message first
                 messageDiv.className = 'form-message success';
-                messageDiv.textContent = 'Thank you! We\'ll notify you as soon as the Quick Haul is back in stock.';
+                messageDiv.textContent = 'Thank you! We\'ll be in touch soon.';
                 messageDiv.style.display = 'block';
                 
                 // Hide the form (message is outside form, so it stays visible)

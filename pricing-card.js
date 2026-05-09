@@ -7,8 +7,8 @@ const PRICING_DATA = {
     { text: 'Insurance & theft protection' },
     { text: 'Normal maintenance and repairs' },
     { text: 'Free delivery in Brooklyn, Manhattan, and Queens' },
-    { text: 'Month-to-month, cancel anytime' },
-    { text: 'Option to purchase' },
+    { text: '2-month and 12-month terms available' },
+    { text: 'Option to buy at any time' },
   ],
 };
 

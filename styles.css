@@ -920,12 +920,12 @@ a.cta-button.nav-cta:visited,
 .out-of-stock-banner {
     display: inline-block;
     color: white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1rem;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.8rem;
     position: absolute;
-    top: 1rem;
+    top: 0.75rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -1001,9 +1001,9 @@ a.cta-button.nav-cta:visited,
 }
 
 .form-message.success {
-    background: #0891b2 !important;
+    background: var(--skyline-blue) !important;
     color: white !important;
-    border: 3px solid #0e7490 !important;
+    border: 3px solid var(--primary-dark) !important;
     display: block;
     font-weight: 600;
     text-align: center;
