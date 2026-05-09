@@ -1,5 +1,5 @@
 const PRICING_DATA = {
-  title: 'Monthly Subscription',
+  title: 'Cargo Bike Subscription',
   price: 300,
   period: 'month',
   features: [
